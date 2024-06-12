@@ -1,0 +1,13 @@
+def main():
+    try:
+        with open('numbersmake.txt', 'r') as infile:
+            numbers = infile.read().split()  
+            numbers = list(map(float, numbers))  
+            total = sum(numbers)
+            num_numbers = len(numbers)
+            average = total / num_numbers
+            print(f"Number of numbers in the file: {num_numbers}")
+            print(f"Sum of the numbers in the file: {total:.2f}")
+            print(f"Average of the numbers in the file: {average:.2f}")
+main()
+

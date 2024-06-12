@@ -1,0 +1,15 @@
+class NegativeValueError(Exception):
+    """Custom exception for negative values."""
+
+def process_list(numbers):
+    for num in numbers:
+        if num < 0:
+            raise NegativeValueError(f"Negative number encountered: {num}")
+
+try:
+    my_list = [1, 2, -3, 4, -5]
+    process_list(my_list)
+    print("All numbers are non-negative.")
+except NegativeValueError as e:
+    print(f"Error: {e}")
+

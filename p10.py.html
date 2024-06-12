@@ -1,0 +1,10 @@
+def append_to_file(filename, new_data):
+    with open(filename, "a") as f:
+        f.write(new_data) 
+    with open(filename, "r") as f:
+        print(f.read())
+file_name = "myfile.txt"
+new_content = "\nToday is a great day!"  
+append_to_file(file_name, new_content)
+
+f.close()
